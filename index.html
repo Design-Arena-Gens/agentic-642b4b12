@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jarvis Voice Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="logo">??</div>
+      <div class="title">Jarvis Voice Agent</div>
+    </div>
+    <div class="actions">
+      <label class="toggle">
+        <input type="checkbox" id="autoRunActions" checked />
+        <span>Auto-run actions</span>
+      </label>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel mic-panel">
+      <h2>Talk to Jarvis</h2>
+      <div class="mic-controls">
+        <button id="listenBtn" class="primary">??? Start Listening</button>
+        <button id="stopBtn" class="secondary" disabled>?? Stop</button>
+      </div>
+      <div class="transcript" id="transcript" aria-live="polite"></div>
+      <div class="fallback">
+        <input id="textInput" placeholder="Type your command if mic is blocked (e.g., 'Hey Jarvis, call Daddy')." />
+        <button id="sendText" class="secondary">Send</button>
+      </div>
+    </section>
+
+    <section class="panel plan-panel">
+      <h2>Plan</h2>
+      <ol id="planList" class="plan"></ol>
+    </section>
+
+    <section class="panel result-panel">
+      <h2>Actions</h2>
+      <div id="actions" class="actions-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      Examples: ?Hey Jarvis, call Daddy?, ?Jarvis, open Google Maps and start directions to Sadar Bazaar Chatgali?, ?Jarvis, book a hair salon appointment on 4th November at 2 PM?.
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
